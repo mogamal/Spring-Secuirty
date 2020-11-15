@@ -1,0 +1,13 @@
+package com.springsecurity.lec01.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+@Configuration
+public class ProjectConfiguration {
+
+	public PasswordEncoder passwordEncoder()
+	{
+		return new NoOpPasswordEncoder()
+	}
+}

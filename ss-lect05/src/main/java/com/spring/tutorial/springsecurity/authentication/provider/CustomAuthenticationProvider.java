@@ -1,0 +1,40 @@
+package com.spring.tutorial.springsecurity.authentication.provider;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.stereotype.Component;
+
+import com.spring.tutorial.springsecurity.authentication.manager.CustomAuthenticationManager;
+
+
+@Component
+public class CustomAuthenticationProvider implements AuthenticationProvider {
+
+	@Value("${key}")
+	private String key ;
+	@Override
+	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+	
+		var value = authentication.getName();
+		if( key .equals(value))
+		{
+			var result = new CustomAuthenticationManager(key, null,null);
+			return result;
+		}else 
+		{
+			
+			new BadCredentialsException("Bad key provided!");
+		}
+		return null;
+	}
+
+	@Override
+	public boolean supports(Class<?> authentication) {
+		
+		return CustomAuthenticationManager.class.isAssignableFrom(authentication);
+	}
+
+}

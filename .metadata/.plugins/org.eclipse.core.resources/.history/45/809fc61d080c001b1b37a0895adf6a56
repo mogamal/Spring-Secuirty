@@ -1,0 +1,32 @@
+package com.spring.tutorial.springsecurity.authentication;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+
+public class CustomAuthenticationProvider implements AuthenticationProvider {
+
+	@Autowired
+	private UserDetailsService userDetailsService;
+	
+	@Override
+	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+
+		/**
+		 * Her you implment the authentication logic
+		 * if the request is authentication you should return a fully authenticated authentication instance 
+		 * if the request is not authenticated you should throw Authenication exception
+		 * */
+		return null;
+	}
+
+	@Override
+	public boolean supports(Class<?> authentication) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

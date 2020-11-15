@@ -1,0 +1,24 @@
+package com.spring.tutorial.springsecurity.security.provider;
+
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+
+import com.spring.tutorial.springsecurity.service.JpaUserDetailsService;
+
+public class UsernamePasswordAuthentication implements AuthenticationProvider {
+
+	private JpaUserDetailsService  userDetialsService;
+
+	@Override
+	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+		return null;
+	}
+
+	@Override
+	public boolean supports(Class<?> authentication) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

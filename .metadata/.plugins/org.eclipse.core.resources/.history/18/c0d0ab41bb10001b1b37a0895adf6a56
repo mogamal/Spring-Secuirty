@@ -1,0 +1,38 @@
+package com.spring.tutorial.springsecurity.security.provider;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+
+import com.spring.tutorial.springsecurity.model.Otp;
+import com.spring.tutorial.springsecurity.respository.OtpRepository;
+import com.spring.tutorial.springsecurity.security.authentications.OtpAuthentication;
+
+public class OtpAuthenticationProvider implements AuthenticationProvider {
+
+	
+	@Autowired
+	private OtpRepository otpRepository;
+	@Override
+	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+		String username = authentication.getName();
+		String otp = String.valueOf(authentication.getCredentials());
+		Optional<Otp> otpEntity = otpRepository.findOtpByUsername(username);
+		if(otpEntity.isPresent())
+		{
+			return new OtpAuthentication(username, otp,List.of(()->"read"));
+		}
+		return null;
+	}
+
+	@Override
+	public boolean supports(Class<?> authentication) {
+		// TODO Auto-generated method stub
+		return OtpAuthenticationProvider.class.equals(authentication);
+	}
+
+}

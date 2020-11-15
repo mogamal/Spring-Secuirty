@@ -1,0 +1,17 @@
+package com.spring.tutorial.springsecurity.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.provisioning.UserDetailsManager;
+
+@Configuration
+public class ProjectConfig {
+
+	public UserDetailsService userDetailsService()
+	{
+		var inMemoryUserDetailsManager = new InMemoryUserDetailsManager();
+		
+		return inMemoryUserDetailsManager;
+	}
+}

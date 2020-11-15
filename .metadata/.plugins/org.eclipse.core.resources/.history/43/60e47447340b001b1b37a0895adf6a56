@@ -1,0 +1,5 @@
+package com.spring.tutorial.springsecurity.dto;
+
+public class User {
+
+}

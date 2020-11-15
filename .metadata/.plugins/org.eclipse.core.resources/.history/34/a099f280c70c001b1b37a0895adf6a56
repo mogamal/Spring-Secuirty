@@ -1,0 +1,12 @@
+package com.spring.tutorial.springsecurity.filer;
+
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+
+public class CustomAuthenticationManager extends UsernamePasswordAuthenticationToken {
+
+	public CustomAuthenticationManager(Object principal, Object credentials) {
+		super(principal, credentials);
+	}
+	
+
+}

@@ -1,0 +1,5 @@
+package com.springsecurity.lec01.controller;
+
+public class TestController {
+
+}

@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\Technologies\Spring\From Youtubue\MyCodeWS\Lec01\.metadata\.plugins\org.eclipse.jdt.core
+1095381912.index
+2943105502.index
+2940490420.index

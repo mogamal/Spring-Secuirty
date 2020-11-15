@@ -1,0 +1,11 @@
+package com.spring.tutorial.springsecurity.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class User {
+
+	private int id ;
+	private String username ;
+	private String password;
+}

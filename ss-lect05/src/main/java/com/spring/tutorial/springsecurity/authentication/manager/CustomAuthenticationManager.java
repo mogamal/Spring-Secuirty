@@ -1,0 +1,19 @@
+package com.spring.tutorial.springsecurity.authentication.manager;
+
+import java.util.Collection;
+
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.GrantedAuthority;
+
+public class CustomAuthenticationManager extends UsernamePasswordAuthenticationToken {
+
+	public CustomAuthenticationManager(Object principal, Object credentials) {
+		super(principal, credentials);
+	}
+
+	public CustomAuthenticationManager(Object principal, Object credentials,
+			Collection<? extends GrantedAuthority> authorities) {
+		super(principal, credentials, authorities);
+	}
+
+}

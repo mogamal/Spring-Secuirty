@@ -1,0 +1,11 @@
+package com.spring.tutorial.springsecurity.model.security;
+
+import org.springframework.security.core.userdetails.UserDetails;
+
+public class SecurityUser implements UserDetails{
+
+	public SecurityUser() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

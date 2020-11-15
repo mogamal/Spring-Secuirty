@@ -1,0 +1,9 @@
+package com.spring.tutorial.springsecurity.model;
+
+public class Otp {
+
+	public Otp() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

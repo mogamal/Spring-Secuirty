@@ -1,0 +1,3 @@
+server.port=8086
+server.servlet.context-path=/sslec06
+spring.datasource.url=jdbc:mysql://localhost/spring06

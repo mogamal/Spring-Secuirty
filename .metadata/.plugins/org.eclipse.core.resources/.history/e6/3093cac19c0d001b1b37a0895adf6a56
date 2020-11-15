@@ -1,0 +1,9 @@
+package com.spring.tutorial.springsecurity.respository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.spring.tutorial.springsecurity.model.User;
+
+public class UserRepository implements JpaRepository<User, Integer> {
+
+}

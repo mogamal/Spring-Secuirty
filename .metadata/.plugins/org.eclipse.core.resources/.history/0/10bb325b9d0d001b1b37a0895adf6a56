@@ -1,0 +1,7 @@
+package com.spring.tutorial.springsecurity.service;
+
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+public class JpaUserDetailsService implements UserDetailsService {
+
+}

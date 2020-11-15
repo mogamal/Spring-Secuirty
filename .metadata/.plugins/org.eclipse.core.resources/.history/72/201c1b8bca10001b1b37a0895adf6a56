@@ -1,0 +1,9 @@
+package com.spring.tutorial.springsecurity.model.security;
+
+public class SecurityUser {
+
+	public SecurityUser() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

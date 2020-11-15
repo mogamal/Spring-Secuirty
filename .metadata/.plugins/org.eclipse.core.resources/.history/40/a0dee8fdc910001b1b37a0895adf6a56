@@ -1,0 +1,9 @@
+package com.spring.tutorial.springsecurity.repository;
+
+public class OtpRepository {
+
+	public OtpRepository() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.spring.tutorial.springsecurity.config;
+
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+public class ProjectConfig extends WebSecurityConfigurerAdapter {
+
+	
+	public PasswordEncoder passwordEncoder()
+	{
+		return  NoOpPasswordEncoder().getInstance();
+	}
+}

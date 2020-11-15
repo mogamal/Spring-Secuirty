@@ -1,0 +1,5 @@
+package com.spring.tutorial.springsecurity.service;
+
+public class JpaUserDetailsService {
+
+}
